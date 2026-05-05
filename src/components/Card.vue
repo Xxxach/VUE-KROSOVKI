@@ -18,15 +18,20 @@ defineProps({
   <div
     class="relative bg-white border border-slate-100 rounded-xl p-8 cursor-pointer transition ease-flyme2 duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-bord"
   >
+    <!-- Иконка лайка -->
     <img
       v-if="onClickAdd"
       @click="onClickFavorite"
       class="absolute top-8 left-8"
-      :src="!isFavorite ? '/like-1.svg' : '/like-2.svg'"
-      alt="LIKE1"
+      :src="
+        !isFavorite ? '/VUE-KROSOVKI/like-1.svg' : '/VUE-KROSOVKI/like-2.svg'
+      "
+      alt="LIKE"
     />
 
-    <img :src="imageUrl" alt="sneak" />
+    <!-- Сами кроссовки -->
+    <img :src="'/VUE-KROSOVKI' + imageUrl" alt="sneak" />
+
     <p class="mt-2">{{ title }}</p>
 
     <div class="flex justify-between mt-5">
@@ -35,10 +40,11 @@ defineProps({
         <b>{{ price }}</b>
       </div>
 
+      <!-- Иконка плюсика / галочки -->
       <img
         v-if="onClickAdd"
         @click="onClickAdd"
-        :src="!isAdded ? '/plus.svg' : '/checked.svg'"
+        :src="!isAdded ? '/VUE-KROSOVKI/plus.svg' : '/VUE-KROSOVKI/checked.svg'"
         alt="PLUS"
       />
     </div>
