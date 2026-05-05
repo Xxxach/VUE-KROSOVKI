@@ -15,7 +15,6 @@ defineProps({
   <div
     class="relative bg-white border border-slate-100 rounded-xl p-8 cursor-pointer transition ease-flyme2 duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-bord"
   >
-    <!-- Иконка лайка -->
     <img
       v-if="onClickAdd"
       @click="onClickFavorite"
@@ -25,19 +24,13 @@ defineProps({
       "
       alt="LIKE"
     />
-
-    <!-- Сами кроссовки -->
     <img :src="'/VUE-KROSOVKI' + imageUrl" alt="sneak" />
-
     <p class="mt-2">{{ title }}</p>
-
     <div class="flex justify-between mt-5">
       <div class="flex flex-col">
         <span class="text-slate-400">Цена</span>
         <b>{{ price }}</b>
       </div>
-
-      <!-- Иконка плюсика / галочки -->
       <img
         v-if="onClickAdd"
         @click="onClickAdd"
