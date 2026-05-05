@@ -11,6 +11,9 @@ const emit = defineEmits(['addToFavorite', 'addToCart']);
 
 <template>
   <div class="grid grid-cols-4 gap-6">
+    <div v-if="items.length === 0">Данных нет, массив пустой...</div>
+    <div v-else>Загружено товаров: {{ items.length }}</div>
+
     <Card
       v-for="item in items"
       :key="item?.id"
