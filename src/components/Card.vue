@@ -12,9 +12,6 @@ defineProps({
 </script>
 
 <template>
-  <!-- <div
-    class="relative bg-white border border-slate-100 rounded-xl p-8 cursor-pointer transition ease-flyme duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-bord active:-translate-y-1 active:opacity-90 active:shadow-bord-act/80"
-  > -->
   <div
     class="relative bg-white border border-slate-100 rounded-xl p-8 cursor-pointer transition ease-flyme2 duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-bord"
   >
