@@ -16,11 +16,7 @@ const emit = defineEmits(['addToFavorite', 'addToCart']);
       :key="item?.id"
       :id="item?.id"
       :title="item?.title"
-      :image-url="
-        item?.imageUrl
-          ? (import.meta.env.BASE_URL + item.imageUrl).replace('//', '/')
-          : ''
-      "
+      :image-url="item?.imageUrl"
       :price="item?.price"
       :is-favorite="item?.isFavorite"
       :onClickFavorite="isFavorites ? null : () => emit('addToFavorite', item)"
