@@ -83,6 +83,7 @@ const fetchFavorites = async () => {
 
 const fetchItems = async () => {
   try {
+    console.log('--- ОТЛАДКА: Начинаю запрос к Mokky ---');
     const params = {
       sortBy: filters.sortBy,
     };
@@ -91,21 +92,29 @@ const fetchItems = async () => {
       params.title = `*${filters.searchQuery}*`;
     }
 
-    const { data } = await axios.get(
+    const response = await axios.get(
       `https://d871c578df71a2ff.mokky.dev/items`,
-      {
-        params,
-      },
+      { params },
     );
 
-    items.value = data.map((obj) => ({
-      ...obj,
-      isFavorite: false,
-      favoriteId: null,
-      isAdded: false,
-    }));
+    console.log('--- ОТЛАДКА: Ответ от сервера:', response.data);
+
+    if (Array.isArray(response.data)) {
+      items.value = response.data.map((obj) => ({
+        ...obj,
+        isFavorite: false,
+        favoriteId: null,
+        isAdded: false,
+      }));
+      console.log(
+        '--- ОТЛАДКА: items.value заполнен, длина:',
+        items.value.length,
+      );
+    } else {
+      console.error('--- ОТЛАДКА: Сервер вернул не массив!', response.data);
+    }
   } catch (err) {
-    console.log(err);
+    console.error('--- ОТЛАДКА: Произошла ошибка при запросе:', err);
   }
 };
 
