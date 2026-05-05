@@ -55,13 +55,13 @@ const buttonDisabled = computed(() => isCreating.value || cartIsEmpty.value);
           v-if="!totalPrice && !orderId"
           title="Корзина пуста"
           description="Добавьте товар"
-          imageUrl="/package-icon.png"
+          :imageUrl="'/VUE-KROSOVKI/package-icon.png'"
         />
         <InfoBlock
           v-if="orderId"
           title="Заказ оформлен"
           :description="`Ваш заказ #${orderId} обрабатывается на базе`"
-          imageUrl="/order-success-icon.png"
+          :imageUrl="'/VUE-KROSOVKI/order-success-icon.png'"
         />
       </div>
 

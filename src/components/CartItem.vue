@@ -11,7 +11,7 @@ defineProps({
 
 <template>
   <div class="flex border border-slate-200 p-4 rounded-xl gap-4">
-    <img class="w-16 h-16" :src="'/VUE-KROSOVKI' + imageUrl" :alt="title" />
+    <img class="w-16 h-16" :src="'/VUE-KROSOVKI' + imageUrl" alt="sneak" />
     <div class="flex flex-col flex-1">
       <p>{{ title }}</p>
       <div class="flex justify-between mt-2">
