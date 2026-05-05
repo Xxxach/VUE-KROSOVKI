@@ -19,7 +19,7 @@ defineProps({
         <img
           @click="emit('onClickRemove')"
           class="opacity-40 cursor-pointer transition duration-300 ease-flyme hover:opacity-100"
-          src="/VUE-KROSOVKI/close.svg"
+          :src="'/VUE-KROSOVKI/close.svg'"
           alt="Close"
         />
       </div>
