@@ -54,6 +54,7 @@ provide('cart', {
 </script>
 
 <template>
+  <h1>ТЕСТ ЗАПУСКА</h1>
   <Transition name="drawer">
     <Drawer v-if="drawerOpen" :total-price="totalPrice" :vat-price="vatPrice" />
   </Transition>
