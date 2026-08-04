@@ -1,38 +1,17 @@
-# vue-krosovki
+# Интернет-магазин обуви на Vue 3
 
-This template should help get you started developing with Vue 3 in Vite.
+Интерактивное SPA-приложение интернет-магазина с динамической корзиной и системой лайков.
 
-## Recommended IDE Setup
+🔗 **Посмотреть сайт:** https://xxxach.github.io/VUE-KROSOVKI/ 
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+### 🛠 Стек технологий:
+* **Frontend:** Vue 3 (Composition API)
+* **Бэкенд-сервис:** Mokky.dev — настроена база данных и REST API
+* **Запросы к серверу:** Axios (async / await)
+* **Стилизация:** Tailwind CSS 
 
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+### ⚡ Что сделано в проекте:
+* Настроил полноценную интеграцию с REST API на Mokky.dev через Axios.
+* Реализовал асинхронные JSON-запросы для динамического добавления товаров в корзину и подсчета стоимости.
+* Сделал систему добавления товаров в "Избранное" (лайки) с сохранением состояния на сервере.
+* Оптимизировал асинхронную выгрузку каталога товаров для быстрой загрузки страниц. 
